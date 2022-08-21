@@ -1,13 +1,13 @@
 # Nodejs + Kafka
 
-This project was created just to kafka with nodejs
+This project was created just to test how to use nodejs with kafka.
 
 ## Installation
 
 Use docker-compose, docker-compose has a kafka server container.
 
 ```bash
-sudo docker-compose up -d --build
+sudo docker-compose up -d
 ```
 ## Run application
 ```bash
@@ -18,7 +18,7 @@ npm start
 
 ## Application
 
-This application uses 3 topics. First is calculate topic, when iseven route receive a request send to topic called "calculate", after calculate consumer get the value sent and check if number is even or odd, it's send to even or odd topic. After all if even/odd write into a queue file just to record (even.queue / odd.queue).
+This application uses 3 topics. First is calculate topic, when iseven route receive a request, will send to kafka topic called "calculate", after calculate consumer get the value sent and check if number is even or odd, it's send to even or odd topic. After all if even/odd write into a queue file, just to record (even.queue / odd.queue).
 
 
 To execute, just send a GET action.
